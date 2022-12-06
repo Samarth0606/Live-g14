@@ -5,6 +5,9 @@ let path =  require('path');
 app.set('view engine' , 'ejs');
 app.set('views' , path.join(__dirname , 'views'));
 
+//middleware for using static files
+app.use(express.static(path.join(__dirname, 'public')));
+
 let  todoos = ['go to gym' , 'study java' , 'study web' , 'khao peeyo aaish kro']
 
 
