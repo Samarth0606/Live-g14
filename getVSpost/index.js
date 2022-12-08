@@ -5,6 +5,8 @@ let path = require('path');
 app.set('view engine' , 'ejs');
 app.set('views' , path.join(__dirname, 'views'));
 
+// middleware for json data
+app.use(express.json());
 //middleware for parsing the form data
 app.use(express.urlencoded({ extended: true }));
 
